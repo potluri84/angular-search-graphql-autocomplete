@@ -20,22 +20,9 @@ import { GraphQLModule } from './graphql.module';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    HttpClientModule,
-    ApolloModule,
-    HttpLinkModule,
-    GraphQLModule
+    HttpClientModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-  constructor(
-    apollo: Apollo,
-    httpLink: HttpLink
-  ) {
-    apollo.create({
-      link: httpLink.create({ uri: 'http://localhost:4000/graphql' }),
-      cache: new InMemoryCache()
-    });
-  }
-}
+export class AppModule {}

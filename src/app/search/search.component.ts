@@ -47,6 +47,5 @@ export class SearchComponent implements OnInit {
       console.log(data);
     })};
   }
-}
 
       //.switchMap((searchText) => this._apollo.query({query: gql'{search(text: '+ searchText +') {term results { uri label types {uri} matches {propertyUri string} }}}' }))
